@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 	"os/exec"
+	"strings"
 )
 
 func execute(name string, arg ...string) string {
@@ -13,7 +14,8 @@ func execute(name string, arg ...string) string {
 	os.Stdout = w
 	os.Stderr = w
 
-	cmd := exec.Command(name, arg...)
+	command := fmt.Sprintf("%s %s", name, strings.Join(arg, " "))
+	cmd := exec.Command("bash", "-c", command)
 
 	stdin, err := cmd.StdinPipe()
 
