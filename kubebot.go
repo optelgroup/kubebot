@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/go-chat-bot/bot"
+	"github.com/optelgroup/bot"
 )
 
 type Kubebot struct {
