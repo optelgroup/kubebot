@@ -14,8 +14,7 @@ func execute(name string, arg ...string) string {
 	os.Stdout = w
 	os.Stderr = w
 
-	command := fmt.Sprintf("%s %s", name, strings.Join(arg, " "))
-	cmd := exec.Command("bash", "-c", command)
+	cmd := exec.Command(name, arg...) 
 
 	stdin, err := cmd.StdinPipe()
 
