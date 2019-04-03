@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: kubebot
-        image: gcr.io/internaltools-184612/kubebot:latest
-        imagePullPolicy: Always
+         image: harbur/kubebot:0.1.0 
+         imagePullPolicy: Always
         env:
         # Create a secret with your slack bot token and reference it here
         - name: KUBEBOT_SLACK_TOKEN
