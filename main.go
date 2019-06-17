@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-chat-bot/bot/slack"
+	"github.com/optelgroup/bot/slack"
 )
 
 const (
